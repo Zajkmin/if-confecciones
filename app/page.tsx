@@ -247,7 +247,7 @@ export default function IFConfeccionesWeb() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0f0f10] text-white overflow-hidden" style={{ "--accent": accent } as CSSProperties}>
+    <div className="min-h-screen bg-[#0f0f10] text-white overflow-x-hidden" style={{ "--accent": accent } as CSSProperties}>
       <header className="fixed top-0 left-0 right-0 z-40 px-5 md:px-10 py-4 flex items-center justify-between bg-[#0f0f10]/70 backdrop-blur-xl border-b border-white/10">
         <button onClick={() => setSection(0)} className="flex items-center gap-3">
           <div className="font-serif text-3xl font-black">I<span style={{ color: accent }}>F</span></div>
@@ -264,7 +264,7 @@ export default function IFConfeccionesWeb() {
       </header>
 
       <AnimatePresence mode="wait">
-        <motion.main key={section} initial={{ opacity: 0, scale: 0.98, filter: "blur(12px)" }} animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} exit={{ opacity: 0, scale: 1.02, filter: "blur(12px)" }} transition={{ duration: 0.45 }} className="h-screen pt-20">
+        <motion.main key={section} initial={{ opacity: 0, scale: 0.98, filter: "blur(12px)" }} animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} exit={{ opacity: 0, scale: 1.02, filter: "blur(12px)" }} transition={{ duration: 0.45 }} className="min-h-screen pt-20">
           {section === 0 && <Home setSection={setSection} accent={accent} banner={banner} />}
           {section === 1 && <About />}
           {section === 2 && <Products products={products} setSelected={setSelected} addCart={addCart} />}
@@ -288,6 +288,15 @@ function Home({ setSection, accent, banner }: { setSection: SetSection; accent: 
       <motion.h1 variants={fade} className="font-serif text-5xl md:text-8xl leading-none">Calidad que se diseña,<br /><span style={{ color: accent }}>comodidad</span> que se viste.</motion.h1>
       <motion.p variants={fade} className="text-white/65 max-w-xl">Una experiencia de compra premium, rápida y directa por WhatsApp. Remeras, joggers, sudaderas, blusas y palazos con estética limpia y confección industrial.</motion.p>
       <motion.div variants={fade} className="flex flex-wrap gap-3"><MagneticButton onClick={() => setSection(3)}>Comprar ahora</MagneticButton><Button onClick={() => setSection(2)} variant="outline" className="rounded-full border-white/20 bg-white/5">Ver catálogo</Button></motion.div>
+      <motion.div variants={fade} className="bg-white/10 border border-white/10 rounded-3xl p-4 max-w-xl">
+        <p className="text-xs uppercase tracking-[0.35em] text-white/50 mb-3">Ir a</p>
+        <div className="grid grid-cols-2 gap-3">
+          <button onClick={() => setSection(1)} className="rounded-2xl bg-[#0f0f10] px-4 py-3 text-sm font-semibold text-white hover:bg-white/10">Nosotros</button>
+          <button onClick={() => setSection(2)} className="rounded-2xl bg-[#0f0f10] px-4 py-3 text-sm font-semibold text-white hover:bg-white/10">Productos</button>
+          <button onClick={() => setSection(3)} className="rounded-2xl bg-[#0f0f10] px-4 py-3 text-sm font-semibold text-white hover:bg-white/10">Tienda Online</button>
+          <button onClick={() => setSection(4)} className="rounded-2xl bg-[#0f0f10] px-4 py-3 text-sm font-semibold text-white hover:bg-white/10">Contacto</button> 
+        </div>
+      </motion.div>
       <motion.div variants={fade} className="bg-white/10 border border-white/10 rounded-2xl p-4 max-w-lg"><p className="text-sm"><Truck className="inline mr-2" size={18} />{banner}</p></motion.div>
     </motion.div>
     <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} className="relative hidden lg:block">
