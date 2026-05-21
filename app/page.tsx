@@ -86,6 +86,90 @@ const initialProducts = [
     sizes: { S: 2, M: 2, L: 3, XL: 1 },
     clicks: 112,
   },
+  {
+    id: 6,
+    name: "Jogger Grey Minimal",
+    category: "Línea Sport",
+    price: 72000,
+    cost: 38000,
+    image: "https://images.unsplash.com/photo-1549317665-1d3f6f5b6f6d?q=80&w=900&auto=format&fit=crop",
+    desc: "Jogger cómodo para uso diario y entrenamiento ligero.",
+    composition: "Algodón mezclado con elastano, pretina con cordón.",
+    sizes: { S: 6, M: 10, L: 8, XL: 4 },
+    clicks: 64,
+  },
+  {
+    id: 7,
+    name: "Remera Logo Essential",
+    category: "Línea Urban",
+    price: 42000,
+    cost: 21000,
+    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=900&auto=format&fit=crop",
+    desc: "Remera básica con logo pequeño en el pecho.",
+    composition: "Algodón 100% premium.",
+    sizes: { S: 12, M: 16, L: 14, XL: 6 },
+    clicks: 78,
+  },
+  {
+    id: 8,
+    name: "Camiseta Sport-Tech",
+    category: "Línea Sport",
+    price: 54000,
+    cost: 30000,
+    image: "https://images.unsplash.com/photo-1520975920074-6c1f1c8cd3f4?q=80&w=900&auto=format&fit=crop",
+    desc: "Camiseta técnica, transpirable para actividad física.",
+    composition: "Microfibra transpirable con tratamiento anti-olor.",
+    sizes: { S: 8, M: 12, L: 9, XL: 5 },
+    clicks: 49,
+  },
+  {
+    id: 9,
+    name: "Jogger Cargo",
+    category: "Línea Urban",
+    price: 98000,
+    cost: 54000,
+    image: "https://images.unsplash.com/photo-1593032465178-3f3db9b1a8b1?q=80&w=900&auto=format&fit=crop",
+    desc: "Jogger con bolsillos laterales estilo cargo.",
+    composition: "Drill suave con refuerzos en costuras.",
+    sizes: { S: 4, M: 7, L: 6, XL: 3 },
+    clicks: 37,
+  },
+  {
+    id: 10,
+    name: "Remera Oversize Vintage",
+    category: "Línea Urban",
+    price: 48000,
+    cost: 25000,
+    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=900&auto=format&fit=crop",
+    desc: "Remera de corte oversize con lavado vintage.",
+    composition: "Algodón peinado lavado.",
+    sizes: { S: 6, M: 10, L: 12, XL: 8 },
+    clicks: 55,
+  },
+  {
+    id: 11,
+    name: "Blazer Soft-Touch",
+    category: "Línea Casual Femenina",
+    price: 145000,
+    cost: 82000,
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=900&auto=format&fit=crop",
+    desc: "Blazer de corte suave para looks formales e informales.",
+    composition: "Mezcla sintética con caída fluida.",
+    sizes: { S: 3, M: 4, L: 3, XL: 1 },
+    clicks: 22,
+  },
+  {
+    id: 12,
+    name: "Shorts Summer Knit",
+    category: "Línea Sport",
+    price: 36000,
+    cost: 17000,
+    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=900&auto=format&fit=crop",
+    desc: "Short deportivo ligero para uso diario y entrenamiento.",
+    composition: "Tejido de punto suave y secado rápido.",
+    sizes: { S: 10, M: 12, L: 8, XL: 4 },
+    clicks: 18,
+  },
 ];
 
 const sections = ["Inicio", "Nosotros", "Productos", "Tienda Online", "Contacto"];
@@ -287,17 +371,10 @@ function Home({ setSection, accent, banner }: { setSection: SetSection; accent: 
       <motion.p variants={fade} className="text-xs tracking-[0.45em] uppercase" style={{ color: accent }}>Moda urbana confeccionada en Itauguá</motion.p>
       <motion.h1 variants={fade} className="font-serif text-5xl md:text-8xl leading-none">Calidad que se diseña,<br /><span style={{ color: accent }}>comodidad</span> que se viste.</motion.h1>
       <motion.p variants={fade} className="text-white/65 max-w-xl">Una experiencia de compra premium, rápida y directa por WhatsApp. Remeras, joggers, sudaderas, blusas y palazos con estética limpia y confección industrial.</motion.p>
-      <motion.div variants={fade} className="flex flex-wrap gap-3"><MagneticButton onClick={() => setSection(3)}>Comprar ahora</MagneticButton><Button onClick={() => setSection(2)} variant="outline" className="rounded-full border-white/20 bg-white/5">Ver catálogo</Button></motion.div>
-      <motion.div variants={fade} className="bg-white/10 border border-white/10 rounded-3xl p-4 max-w-xl">
-        <p className="text-xs uppercase tracking-[0.35em] text-white/50 mb-3">Ir a</p>
-        <div className="grid grid-cols-2 gap-3">
-          <button onClick={() => setSection(1)} className="rounded-2xl bg-[#0f0f10] px-4 py-3 text-sm font-semibold text-white hover:bg-white/10">Nosotros</button>
-          <button onClick={() => setSection(2)} className="rounded-2xl bg-[#0f0f10] px-4 py-3 text-sm font-semibold text-white hover:bg-white/10">Productos</button>
-          <button onClick={() => setSection(3)} className="rounded-2xl bg-[#0f0f10] px-4 py-3 text-sm font-semibold text-white hover:bg-white/10">Tienda Online</button>
-          <button onClick={() => setSection(4)} className="rounded-2xl bg-[#0f0f10] px-4 py-3 text-sm font-semibold text-white hover:bg-white/10">Contacto</button> 
-        </div>
+      <motion.div variants={fade} className="flex flex-wrap gap-3">
+        <MagneticButton onClick={() => setSection(3)}>Comprar ahora</MagneticButton>
+        <Button onClick={() => setSection(2)} variant="outline" className="rounded-full border-white/20 bg-white/5">Ver catálogo</Button>
       </motion.div>
-      <motion.div variants={fade} className="bg-white/10 border border-white/10 rounded-2xl p-4 max-w-lg"><p className="text-sm"><Truck className="inline mr-2" size={18} />{banner}</p></motion.div>
     </motion.div>
     <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} className="relative hidden lg:block">
       <img loading="lazy" className="h-[72vh] w-full object-cover rounded-[2rem] shadow-2xl grayscale-[15%]" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop" />
@@ -327,11 +404,14 @@ function Products({ products, setSelected, addCart }: { products: Product[]; set
 }
 
 function Shop({ products, query, setQuery, setSelected, addCart }: { products: Product[]; query: string; setQuery: Dispatch<SetStateAction<string>>; setSelected: SetSelected; addCart: (product: Product, size: string) => void }) {
-  return <section className="h-full px-6 md:px-12 overflow-y-auto pb-12"><Title label="Tienda Online" title="Buscá, elegí talle y comprá" />
-    <div className="relative mt-6 max-w-2xl"><Search className="absolute left-4 top-3.5 text-white/40" size={18} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Buscar remera, jogger, blusa, palazo..." className="w-full rounded-full bg-white/10 border border-white/10 py-3 pl-12 pr-4 outline-none focus:border-[var(--accent)]" />
-      {query && <div className="absolute z-20 top-14 left-0 right-0 bg-[#181818] border border-white/10 rounded-3xl p-3 shadow-2xl">{products.slice(0, 3).map((p) => <button key={p.id} onClick={() => setSelected(p)} className="flex items-center gap-3 w-full hover:bg-white/5 p-2 rounded-2xl"><img src={p.image} className="w-12 h-12 object-cover rounded-xl" /><span>{p.name}</span></button>)}</div>}
+  return <section className="h-full px-6 md:px-12 overflow-y-auto pb-12"><Title label="Tienda Online" title="Próximamente" />
+    <div className="mt-8 flex items-center justify-center">
+      <div className="bg-white/5 border border-white/10 rounded-3xl p-8 text-center max-w-lg">
+        <p className="text-sm text-[var(--accent)] mb-2">Estamos trabajando</p>
+        <h3 className="font-serif text-3xl mb-2">Tienda Online — Próximamente</h3>
+        <p className="text-white/60">La pasarela de pago y la integración con el backend estarán disponibles pronto. Mientras tanto podés usar la sección <strong className="text-white">Catálogo</strong> para explorar productos y confirmar compras por WhatsApp.</p>
+      </div>
     </div>
-    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 mt-8">{products.map((p) => <ProductCard key={p.id} p={p} setSelected={setSelected} addCart={addCart} />)}</div>
   </section>
 }
 
