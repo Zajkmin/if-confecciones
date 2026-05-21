@@ -261,7 +261,7 @@ export default function IFConfeccionesWeb() {
 
   const waOrder = () => {
     const order = cart.map((i) => `${i.name} (${i.size}) x${i.qty}`).join("\n");
-    const text = `🛍️ ORDEN CONFIRMADA - IF Confecciones\n\n👤 Cliente: ${client || "Sin nombre"}\n📍 Ubicación: ${address || zone.city}\n\n📦 Pedido:\n${order}\n\n🚚 Envío: ${gs(zone.delivery)}\n💰 TOTAL: ${gs(total)}\n\nQuiero confirmar mi compra.`;
+    const text = `ORDEN CONFIRMADA - IF Confecciones\n\n Cliente: ${client || "Sin nombre"}\n Ubicación: ${address || zone.city}\n\n Pedido:\n${order}\n\n Envío: ${gs(zone.delivery)}\n TOTAL: ${gs(total)}\n\nQuiero confirmar mi compra.`;
     window.open(`https://wa.me/595976689727?text=${encodeURIComponent(text)}`, "_blank");
   };
 
