@@ -220,7 +220,7 @@ export default function IFConfeccionesWeb() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const savedProducts = localStorage.getItem("if_products");
+    const savedProducts = localStorage.getItem("if_products_v2");
     if (savedProducts) {
       const saved = JSON.parse(savedProducts);
       const merged = saved.map((p: Product) => {
