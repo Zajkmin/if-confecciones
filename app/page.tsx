@@ -188,7 +188,7 @@ export default function IFConfeccionesWeb() {
   const updateProducts = (newProducts: Product[]) => {
     setProducts(newProducts);
     if (typeof window !== "undefined") {
-      localStorage.setItem("if_products", JSON.stringify(newProducts));
+      localStorage.setItem("if_products_v2", JSON.stringify(newProducts));
     }
   };
 
