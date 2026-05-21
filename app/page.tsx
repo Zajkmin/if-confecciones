@@ -44,7 +44,7 @@ const initialProducts = [
     category: "Línea Urban",
     price: 95000,
     cost: 52000,
-    image: "https://images.unsplash.com/photo-1506629905607-d405b7a30db9?q=80&w=900&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
     desc: "Jogger moderno de cintura ajustable y terminación premium.",
     composition: "Frisa liviana, elástico reforzado y bolsillos laterales.",
     sizes: { S: 4, M: 6, L: 5, XL: 3 },
